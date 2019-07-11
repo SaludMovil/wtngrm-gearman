@@ -1,6 +1,6 @@
 {
     "name": "desyncr/wtngrm-gearman",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Zend2 Module for Queueing/Background jobs servers - Gearman adapter",
     "type": "module",
     "license": "GPL-3.0+",
@@ -10,10 +10,10 @@
     ],
     "authors": [
         {
-            "name": "Dario Cavuotti",
-            "email": "dc@syncr.com.ar",
-            "homepage": "http://me.syncr.com.ar",
-            "role": "Developer"
+            "name": "",
+            "email": "",
+            "homepage": "",
+            "role": ""
         }
     ],
     "repositories": [
