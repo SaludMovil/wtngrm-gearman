@@ -54,12 +54,17 @@ class GearmanClientService extends AbstractGearmanService
         set_error_handler(array($this, 'errorHandler'));
         $instance = $this->getGearmanInstance();
 
-        array_map(
-            function ($server) use ($instance) {
-                $instance->addServer($server['host'], $server['port']);
-            },
-            $servers
-        );
+        try {
+            array_map(
+                function ($server) use ($instance) {
+                    $instance->addServer($server['host'], $server['port']);
+                },
+                $servers
+            );
+
+        } catch (\GearmanException $ge) {
+            // TODO implement logging
+        }
         restore_error_handler();
     }
 
